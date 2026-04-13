@@ -1,0 +1,8 @@
+{
+  "name": "Time Travel Photo Booth",
+  "description": "A photo booth app that takes your photo, analyzes your facial features using Gemini 3.1 Pro Preview, and inserts you into various historical scenes using Gemini 2.5 Flash Image.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-hardware-bg: #151619;
+  --color-hardware-surface: #22242A;
+  --color-hardware-border: #333640;
+  --color-hardware-accent: #FF4444;
+  --color-hardware-text: #FFFFFF;
+  --color-hardware-muted: #8E9299;
+}
+
+body {
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+
+.radial-track {
+  border: 1px dashed var(--color-hardware-muted);
+  border-radius: 50%;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 68, 68, 0.8);
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* Custom scrollbar for era selection */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-hardware-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hardware-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-hardware-muted);
+}
